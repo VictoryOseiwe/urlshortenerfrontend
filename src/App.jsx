@@ -8,15 +8,10 @@ export default function App() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "https://urlshortenerbackend-hpn1.onrender.com/shorten",
-        {
-          originalUrl,
-        }
-      );
-      setShortenedUrl(
-        `https://urlshortenerbackend-hpn1.onrender.com/${response.data.shortenedUrl}`
-      );
+      const response = await axios.post("https://siul.vercel.app/shorten", {
+        originalUrl,
+      });
+      setShortenedUrl(`https://siul.vercel.app/${response.data.shortenedUrl}`);
     } catch (error) {
       console.error("Error shortening url: " + error);
     }
