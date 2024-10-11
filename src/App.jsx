@@ -18,7 +18,7 @@ export default function App() {
   }
   return (
     <>
-      <div>
+      <div className="url-container">
         <h1>URL SHORTENER</h1>
         <form>
           <input
@@ -33,11 +33,14 @@ export default function App() {
           </button>
         </form>
         {shortenedUrl && (
-          <div>
+          <div className="short-url">
             <p>Short Url</p>
             <a href={shortenedUrl}>{shortenedUrl}</a>
           </div>
         )}
+      </div>
+      <div className="footer">
+        <p>Powered by victoryoseiwe</p>
       </div>
     </>
   );
