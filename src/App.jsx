@@ -11,7 +11,7 @@ export default function App() {
       const response = await axios.post("https://siul.vercel.app/shorten", {
         originalUrl,
       });
-      setShortenedUrl(`https://siul.vercel.app/${response.data.shortenedUrl}`);
+      setShortenedUrl(`siul.vercel.app/${response.data.shortenedUrl}`);
     } catch (error) {
       console.error("Error shortening url: " + error);
     }
